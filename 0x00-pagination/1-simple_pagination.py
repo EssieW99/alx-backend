@@ -41,11 +41,11 @@ class Server:
             paginate the dataset correctly
             """
 
-            # verify type and value of the arguments
+            """ verify type and value of the arguments"""
             assert type(page) == int and type(page_size) == int
             assert page > 0 and page_size > 0
 
-            # get start and end indexes
+            """ get start and end indexes"""
             start, end = index_range(page, page_size)
 
             dataset = self.dataset()
