@@ -28,7 +28,7 @@ class LRUCache(BaseCaching):
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             first_item = list(self.cache_data.keys())[0]
             del self.cache_data[first_item]
-            print(f'DISCARD {first_item}')
+            print(f'DISCARD: {first_item}')
 
     def get(self, key):
         """ returns the value linked to the key in the dict """
